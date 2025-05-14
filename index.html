@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Aniket Darbar | Portfolio - Java Developer and Web Developer with expertise in full-stack development, e-commerce, and more." />
   <meta name="keywords" content="Java Developer, Web Developer, Full-Stack Development, E-commerce, ReactJS, JSP, Servlets, Portfolio" />
   <meta name="author" content="Aniket Darbar" />
@@ -12,179 +12,179 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    body {
-      background-color: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
 
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
 
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
-    nav ul li a:hover {
-      color: #00b894;
-    }
+nav ul li a:hover {
+  color: #00b894;
+}
 
-    .resume-btn {
-      background-color: #00b894;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-weight: bold;
-      color: white;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
+.resume-btn {
+  background-color: #00b894;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
 
-    .resume-btn:hover {
-      background-color: #019875;
-    }
+.resume-btn:hover {
+  background-color: #019875;
+}
 
-    #hero {
-      width: 100%;
-      background: linear-gradient(to right, #00d2ff, #3a7bd5);
-      color: white;
-      padding: 100px 0;
-    }
+#hero {
+  width: 100%;
+  background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  color: white;
+  padding: 100px 0;
+}
 
-    .hero-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-      text-align: center;
-    }
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
 
-    .hero-text {
-      flex: 1;
-    }
+.hero-text {
+  flex: 1;
+}
 
-    .hero-text h1 {
-      font-size: 2.5rem;
-    }
+.hero-text h1 {
+  font-size: 2.5rem;
+}
 
-    .hero-text .tagline {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
+.hero-text .tagline {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
 
-    .highlight {
-      color: #00ffc3;
-    }
+.highlight {
+  color: #00ffc3;
+}
 
-    .hero-image img {
-      width: 300px;
-      max-width: 100%;
-      border-radius: 10px;
-    }
+.hero-image img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+}
 
-    .hire-me-btn {
-      margin-top: 1.5rem;
-      background: #fff;
-      color: #00b894;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s ease;
-      display: inline-block;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-    }
+.hire-me-btn {
+  margin-top: 1.5rem;
+  background: #fff;
+  color: #00b894;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
 
-    .hire-me-btn:hover {
-      background: #00b894;
-      color: #fff;
-    }
+.hire-me-btn:hover {
+  background: #00b894;
+  color: #fff;
+}
 
-    @media (min-width: 768px) {
-      .hero-container {
-        flex-direction: row;
-        text-align: left;
-      }
+@media (min-width: 768px) {
+  .hero-container {
+    flex-direction: row;
+    text-align: left;
+  }
 
-      .hero-text {
-        text-align: left;
-      }
+  .hero-text {
+    text-align: left;
+  }
 
-      .hero-image img {
-        width: 100%;
-        max-width: 400px;
-      }
-    }
+  .hero-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+}
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s ease forwards;
-    }
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
 
-    .delay-1 {
-      animation-delay: 0.4s;
-    }
+.delay-1 {
+  animation-delay: 0.4s;
+}
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      color: #00b894;
-    }
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #00b894;
+}
 
-    #about p,
-    .project p {
-      font-size: 1.1rem;
-      text-align: center;
-    }
+#about p,
+.project p {
+  font-size: 1.1rem;
+  text-align: center;
+}
 
-    .skills-section {
+.skills-section {
   background: #f9f9f9;
   padding: 4rem 2rem;
   text-align: center;
@@ -241,19 +241,19 @@
   color: #333;
 }
 
+.project {
+  background: #fff;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
 
-    .project {
-      background: #fff;
-      padding: 1.5rem;
-      margin: 1rem 0;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
+.project h3 {
+  margin-bottom: 0.5rem;
+  color: #0984e3;
+}
 
-    .project h3 {
-      margin-bottom: 0.5rem;
-      color: #0984e3;
-    }
 /* Blog Section Styling */
 .blog-section {
   max-width: 900px;
@@ -277,7 +277,9 @@
   color: #444;
 }
 
-.blog-content p, .blog-content ul, .blog-content ol {
+.blog-content p,
+.blog-content ul,
+.blog-content ol {
   line-height: 1.7;
   color: #555;
 }
@@ -288,7 +290,7 @@
   padding: 15px;
   overflow-x: auto;
   border-radius: 8px;
-  font-size: 0.9rem; 
+  font-size: 0.9rem;
 }
 
 .blog-content a {
@@ -300,75 +302,109 @@
   text-decoration: underline;
 }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      max-width: 600px;
-      margin: auto;
-    }
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
 
-    form input,
-    form textarea {
-      padding: 0.75rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
+form input,
+form textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
 
-    form button {
-      background-color: #00b894;
-      color: #fff;
-      padding: 0.75rem;
-      border: none;
-      border-radius: 25px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+form button {
+  background-color: #00b894;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-    form button:hover {
-      background-color: #019875;
-    }
+form button:hover {
+  background-color: #019875;
+}
 
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 1.5rem 0;
-    }
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+}
 
-    #resumeModal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: 2000;
-      justify-content: center;
-      align-items: center;
-    }
+#resumeModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
 
-    #resumeModal iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+#resumeModal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-    #resumeModal button {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: #ff7675;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-    }
+#resumeModal button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff7675;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* For screens less than or equal to 768px */
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 1rem; /* Use rem for relative sizing */
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .sidebar {
+    display: none; /* Hide sidebars on mobile */
+  }
+}
+
+
   </style>
 </head>
 
