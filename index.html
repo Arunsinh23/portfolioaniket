@@ -371,36 +371,49 @@ footer {
   height: 30px;
   cursor: pointer;
 }
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
 
-/* For screens less than or equal to 768px */
-@media only screen and (max-width: 768px) {
-  body {
-    font-size: 1rem; /* Use rem for relative sizing */
-    padding: 10px;
-  }
+/* Fix header layout */
+header {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .navbar {
+/* Fix nav links on small screens */
+@media (max-width: 768px) {
+  nav ul {
     flex-direction: column;
     align-items: center;
+    gap: 0.5rem;
   }
 
-  .nav-links {
+  .hero-container {
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
   }
 
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
-
-  img {
-    max-width: 100%;
+  .hero-image img {
+    width: 90%;
     height: auto;
+    max-width: 300px;
   }
 
-  .sidebar {
-    display: none; /* Hide sidebars on mobile */
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text .tagline {
+    font-size: 1rem;
+  }
+
+  .btn {
+    margin-top: 1rem;
   }
 }
 
@@ -574,23 +587,22 @@ footer {
   </section>
   
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+ <section id="contact">
+  <h2>Contact Me</h2>
+  <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
 
   <!-- Resume Modal -->
-  <div id="resumeModal" onclick="closeModal(event)">
-    <div style="position:relative; width:90%; max-width:800px; height:90%;">
-      <iframe src="Aniket_Resume.pdf"></iframe>
-      <button onclick="document.getElementById('resumeModal').style.display='none'">&times;</button>
-    </div>
-  </div>
+<div id="resumeModal" onclick="this.style.display='none'">
+  <iframe src="Aniket_Resume.pdf"></iframe>
+  <button onclick="document.getElementById('resumeModal').style.display='none'">×</button>
+</div>
 
   <footer>
     <p>&copy; 2025 Aniket Darbar. All rights reserved.</p>
