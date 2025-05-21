@@ -370,20 +370,21 @@ footer {
   width: 30px;
   height: 30px;
   cursor: pointer;
-}
+}/* === Newly Added Fixes === */
+
 /* Prevent horizontal scroll */
 body {
   overflow-x: hidden;
 }
 
-/* Fix header layout */
+/* Fix header layout for smaller screens */
 header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Fix nav links on small screens */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -416,8 +417,6 @@ header {
     margin-top: 1rem;
   }
 }
-
-
   </style>
 </head>
 
