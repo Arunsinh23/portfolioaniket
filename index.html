@@ -132,15 +132,21 @@ nav ul li a:hover {
   color: #fff;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .hero-container {
-    flex-direction: row;
-    text-align: left;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    text-align: center;
+    overflow-x: hidden;
   }
 
-  .hero-text {
-    text-align: left;
+  .hero-text h1 {
+    font-size: 2rem;
+    word-break: break-word;
   }
+}
+
 
   .hero-image img {
     width: 100%;
