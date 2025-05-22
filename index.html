@@ -38,10 +38,6 @@ header {
   top: 0;
   z-index: 1000;
   flex-wrap: wrap;
-  <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
-  &#9776;
-</button>
-
 }
 
 nav ul {
@@ -432,6 +428,7 @@ footer {
 <body>
   <header>
     <h1>Aniket Darbar</h1>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">&#9776;</button>
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
@@ -625,14 +622,15 @@ footer {
       }
     }
   </script>
-  <script>
-  const hamburger = document.getElementById('hamburger-btn');
-  const navMenu = document.getElementById('nav-menu');
+<script>
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const nav = document.querySelector('nav');
 
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('nav-open');
+  hamburgerBtn.addEventListener('click', () => {
+    nav.classList.toggle('nav-open');
   });
 </script>
+
 
 </body>
 
