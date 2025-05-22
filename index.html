@@ -340,18 +340,23 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.resume-container {
+
+#resumeModal .modal-content {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
 }
+
 #resumeModal iframe {
   width: 100%;
   height: 100%;
   border: none;
 }
 
-#resumeModal button {
+#resumeModal button#closeResumeBtn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -361,9 +366,10 @@ footer {
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  font-size: 20px;
   cursor: pointer;
+  z-index: 1;
 }
-
 /* === Added: Hamburger Menu Styles === */
 .hamburger {
   display: none;
@@ -439,19 +445,13 @@ footer {
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#blog">Blog</a></li>
-        <li><button class="resume-btn" onclick="document.getElementById('resumeModal').style.display='flex'">View Resume</button></li>
+        <li>
+          <button class="resume-btn" onclick="openResumeModal()">View Resume</button>
+        </li>
       </ul>
     </nav>
-     <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">&#9776;</button>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">&#9776;</button>
   </header>
-    <script>
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const nav = document.querySelector('nav');
-
-    hamburgerBtn.addEventListener('click', () => {
-      nav.classList.toggle('nav-open');
-    });
-  </script>
 
   <section id="hero">
     <div class="hero-container">
@@ -473,9 +473,9 @@ footer {
     <p>I’m a passionate Java developer from Vadodara. I specialize in full-stack development with Java, JSP, Servlets, and ReactJS. I also co-founded TechNest Solution and have experience building e-commerce websites.</p>
   </section>
 
-  <section class="skills-section">
+  <section class="skills-section" id="skills">
     <h2 class="skills-title">Skills</h2>
-  
+
     <div class="skills-container">
       <div class="skill-card">
         <h3><i class="fas fa-code"></i> Frontend</h3>
@@ -486,7 +486,7 @@ footer {
           <li>ReactJS</li>
         </ul>
       </div>
-  
+
       <div class="skill-card">
         <h3><i class="fas fa-cogs"></i> Backend</h3>
         <ul>
@@ -501,7 +501,7 @@ footer {
           <li>Mockito</li>
         </ul>
       </div>
-  
+
       <div class="skill-card">
         <h3><i class="fas fa-tools"></i> Tools & Database</h3>
         <ul>
@@ -515,7 +515,6 @@ footer {
       </div>
     </div>
   </section>
-
 
   <section id="projects">
     <h2>Projects</h2>
@@ -532,21 +531,21 @@ footer {
       <p>Built for a client in Surat. The site showcases and sells traditional Indian sarees. Includes admin dashboard and payment integration.</p>
     </div>
   </section>
+
   <section id="blog" class="blog-section">
     <h2>📘 How I Built My Online Examination Portal</h2>
-  
     <article class="blog-content">
       <p>Creating an Online Examination Portal was one of the most exciting and challenging projects I've worked on...</p>
-  
+
       <h3>🧠 The Idea</h3>
       <p>The core concept was to create a web-based platform where students can log in and take exams...</p>
-  
+
       <h3>🛠️ Tech Stack Used</h3>
       <ul>
         <li><strong>Frontend:</strong> HTML, CSS, JavaScript, JSP</li>
         <li><strong>Backend:</strong> Java (Servlets), Maven, MySQL, Apache Tomcat</li>
       </ul>
-  
+
       <h3>🧩 Key Features</h3>
       <ol>
         <li><strong>User Authentication:</strong> Session-based login.</li>
@@ -555,40 +554,36 @@ footer {
         <li><strong>Random Questions:</strong> SQL `ORDER BY RAND()`.</li>
         <li><strong>Score Calculation:</strong> Servlet compares answers.</li>
       </ol>
-  
+
       <h3>📁 Folder Structure</h3>
       <pre><code>
-        OnlineExamPortal/
-        │
-        ├── src/main/webapp/
-        │   ├── index.jsp
-        │   ├── login.jsp
-        │   ├── dashboard.jsp
-        │   ├── examQuestions.jsp
-        │   └── result.jsp
-        │
-        ├── src/main/java/
-        │   ├── com.exam.controller.LoginServlet.java
-        │   ├── com.exam.controller.ExamServlet.java
-        │   └── com.exam.controller.ScoreServlet.java
-        │
-        ├── WEB-INF/
-        │   └── web.xml
-        │
-        ├── pom.xml
-        └── README.md
+OnlineExamPortal/
+├── src/main/webapp/
+│   ├── index.jsp
+│   ├── login.jsp
+│   ├── dashboard.jsp
+│   ├── examQuestions.jsp
+│   └── result.jsp
+├── src/main/java/
+│   ├── com.exam.controller.LoginServlet.java
+│   ├── com.exam.controller.ExamServlet.java
+│   └── com.exam.controller.ScoreServlet.java
+├── WEB-INF/
+│   └── web.xml
+├── pom.xml
+└── README.md
       </code></pre>
-  
+
       <h3>🧪 Testing and Deployment</h3>
       <p>Tested locally on Tomcat. Used Postman for backend API testing...</p>
-  
+
       <h3>💡 Challenges I Faced</h3>
       <ul>
         <li>Session handling for multiple roles</li>
         <li>Timer and auto-submit</li>
         <li>Randomized but balanced questions</li>
       </ul>
-  
+
       <h3>📈 What's Next?</h3>
       <ul>
         <li>Face recognition login</li>
@@ -596,32 +591,28 @@ footer {
         <li>Admin analytics with charts</li>
         <li>Responsive UI with Tailwind or Bootstrap</li>
       </ul>
-  
+
       <h3>🙌 Final Thoughts</h3>
       <p>This project sharpened my full-stack skills using Java. Happy to connect if you’re building something similar!</p>
-      
     </article>
   </section>
-  
 
- <section id="contact">
-  <h2>Contact Me</h2>
-  <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea placeholder="Your Message" rows="5" required></textarea>
-    <button type="submit">Send</button>
-  </form>
-</section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-
-  <!-- Resume Modal -->
-<div id="resumeModal" onclick="this.style.display='none'">
-  <iframe src="Aniket_Resume.pdf"></iframe>
-  <button onclick="document.getElementById('resumeModal').style.display='none'">×</button>
-</div>
-<div class="resume-container">
-  <iframe src="resume.pdf" frameborder="0"></iframe>
+<!-- Resume Modal -->
+<div id="resumeModal">
+  <div class="modal-content">
+    <button id="closeResumeBtn">×</button>
+    <iframe src="Aniket_Resume.pdf"></iframe>
+  </div>
 </div>
 
 
@@ -629,14 +620,28 @@ footer {
     <p>&copy; 2025 Aniket Darbar. All rights reserved.</p>
   </footer>
 
-  <script>
-    function closeModal(event) {
-      const modal = document.getElementById('resumeModal');
-      const content = modal.querySelector('div');
-      if (!content.contains(event.target)) {
-        modal.style.display = 'none';
-      }
+<script>
+  const resumeModal = document.getElementById('resumeModal');
+  const closeBtn = document.getElementById('closeResumeBtn');
+  const viewResumeBtn = document.querySelector('.resume-btn');
+
+  // Open resume
+  viewResumeBtn.addEventListener('click', () => {
+    resumeModal.style.display = 'flex';
+  });
+
+  // Close resume
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent bubbling to parent
+    resumeModal.style.display = 'none';
+  });
+
+  // Optional: Click outside modal-content closes modal
+  resumeModal.addEventListener('click', (e) => {
+    if (e.target === resumeModal) {
+      resumeModal.style.display = 'none';
     }
-  </script>
+  });
+</script>
+
 </body>
-</html>
