@@ -370,7 +370,6 @@ footer {
   cursor: pointer;
   z-index: 1;
 }
-/* === Hamburger Button Styles === */
 .hamburger {
   display: none;
   background: none;
@@ -378,27 +377,15 @@ footer {
   color: white;
   font-size: 2rem;
   cursor: pointer;
-  z-index: 1001; /* Stay above nav */
   position: absolute;
   top: 1rem;
   right: 1rem;
+  z-index: 2000;
 }
 
-/* === Base Reset === */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* === Responsive Styles for Mobile === */
 @media (max-width: 768px) {
-  /* Show hamburger on small screens */
   .hamburger {
     display: block;
-  }
-
-  /* Style nav for mobile */
-  nav {
-    position: relative;
   }
 
   nav ul {
@@ -410,45 +397,12 @@ footer {
     left: 0;
     width: 100%;
     padding: 1rem 0;
-    margin: 0;
-    z-index: 1000;
     text-align: center;
+    z-index: 1000;
   }
 
-  /* Show menu when nav has .nav-open */
   nav.nav-open ul {
     display: flex;
-  }
-
-  nav ul li {
-    margin: 0.5rem 0;
-  }
-
-  /* Mobile hero layout */
-  .hero-container {
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-    word-break: break-word;
-  }
-
-  .hero-text .tagline {
-    font-size: 1rem;
-  }
-
-  .btn {
-    margin-top: 1rem;
-  }
-
-  .hero-image img {
-    width: 90%;
-    max-width: 300px;
-    height: auto;
   }
 }
 
