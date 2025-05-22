@@ -428,7 +428,6 @@ footer {
 <body>
   <header>
     <h1>Aniket Darbar</h1>
-      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">&#9776;</button>
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
@@ -439,7 +438,16 @@ footer {
         <li><button class="resume-btn" onclick="document.getElementById('resumeModal').style.display='flex'">View Resume</button></li>
       </ul>
     </nav>
+     <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">&#9776;</button>
   </header>
+    <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const nav = document.querySelector('nav');
+
+    hamburgerBtn.addEventListener('click', () => {
+      nav.classList.toggle('nav-open');
+    });
+  </script>
 
   <section id="hero">
     <div class="hero-container">
@@ -622,16 +630,6 @@ footer {
       }
     }
   </script>
-<script>
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const nav = document.querySelector('nav');
-
-  hamburgerBtn.addEventListener('click', () => {
-    nav.classList.toggle('nav-open');
-  });
-</script>
-
-
 </body>
 
 </html>
