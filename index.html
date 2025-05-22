@@ -370,7 +370,7 @@ footer {
   cursor: pointer;
   z-index: 1;
 }
-/* === Added: Hamburger Menu Styles === */
+/* === Hamburger Button Styles === */
 .hamburger {
   display: none;
   background: none;
@@ -378,30 +378,53 @@ footer {
   color: white;
   font-size: 2rem;
   cursor: pointer;
+  z-index: 1001; /* Stay above nav */
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
+/* === Base Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* === Responsive Styles for Mobile === */
 @media (max-width: 768px) {
+  /* Show hamburger on small screens */
   .hamburger {
     display: block;
+  }
+
+  /* Style nav for mobile */
+  nav {
+    position: relative;
   }
 
   nav ul {
     display: none;
     flex-direction: column;
     background: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
     width: 100%;
     padding: 1rem 0;
+    margin: 0;
+    z-index: 1000;
     text-align: center;
+  }
+
+  /* Show menu when nav has .nav-open */
+  nav.nav-open ul {
+    display: flex;
   }
 
   nav ul li {
     margin: 0.5rem 0;
   }
 
-  nav.nav-open ul {
-    display: flex;
-  }
-
+  /* Mobile hero layout */
   .hero-container {
     flex-direction: column;
     padding: 1.5rem;
@@ -429,9 +452,6 @@ footer {
   }
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 </style>
 </head>
 
@@ -641,6 +661,14 @@ OnlineExamPortal/
     if (e.target === resumeModal) {
       resumeModal.style.display = 'none';
     }
+  });
+</script>
+<script>
+  const hamburger = document.getElementById('hamburger-btn');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('nav-open');
   });
 </script>
 
