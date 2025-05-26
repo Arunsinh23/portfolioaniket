@@ -438,7 +438,7 @@ nav ul li button {
 
   /* Hide nav menu by default */
   nav ul {
-    display: none;
+ display: none;
     flex-direction: column;
     background-color: #333;
     position: fixed;
@@ -447,25 +447,17 @@ nav ul li button {
     height: 100vh;
     width: 200px;
     padding-top: 60px;
-    z-index: 1000
+    z-index: 1000;
   }
 
-
-  .nav-menu.show {
+  /* Show nav menu when toggled */
+  nav.nav-open ul {
     display: flex;
   }
 
-  .nav-menu a {
-    color: white;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 1.2rem;
+  nav ul li {
+    margin: 0.5rem 0;
   }
-
-  .nav-menu a:hover {
-    background-color: #444;
-  }
-}
 
   /* Optional: Increase font size for mobile */
   nav ul li a,
