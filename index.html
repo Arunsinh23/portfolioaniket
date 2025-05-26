@@ -674,14 +674,22 @@ OnlineExamPortal/
     });
 
     // Hamburger toggle
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger-btn');
-  const nav = document.getElementById('main-nav');
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
 
+  // Toggle menu when hamburger is clicked
   hamburger.addEventListener('click', () => {
-    nav.classList.toggle('nav-open');
+    navMenu.classList.toggle('show');
   });
-});
+
+  // Close menu when a menu link is clicked
+  document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show');
+    });
+  });
+</script>
 
   </script>
 </body>
