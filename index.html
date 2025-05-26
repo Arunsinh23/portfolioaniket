@@ -378,50 +378,23 @@ footer {
   cursor: pointer;
   z-index: 1;
 }
-/* === Base Reset === */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* === Hamburger Button Styles === */
 .hamburger {
-  display: none;             /* Hidden on desktop */
+  display: none;
   background: none;
   border: none;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
   cursor: pointer;
   z-index: 1001;
-  position: fixed;
+  position: absolute;
   top: 1.5rem;
   right: 1.5rem;
 }
 
-/* === Navigation Styles (Desktop) === */
-nav {
-  position: relative;
-  background: #222;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem 2rem;
-  gap: 2rem;
-}
-
-nav ul li a,
-nav ul li button {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1rem;
-  background: none;
-  border: none;
-  cursor: pointer;
+/* === Base Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 /* === Responsive Styles for Mobile === */
@@ -431,26 +404,26 @@ nav ul li button {
     display: block;
   }
 
-  /* Make nav full width & position relative */
+  /* Style nav for mobile */
   nav {
     position: relative;
   }
 
-  /* Hide nav menu by default */
   nav ul {
- display: none;
+    display: none;
     flex-direction: column;
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: 200px;
-    padding-top: 60px;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0;
     z-index: 1000;
+    text-align: center;
   }
 
-  /* Show nav menu when toggled */
+  /* Show menu when nav has .nav-open */
   nav.nav-open ul {
     display: flex;
   }
@@ -459,15 +432,7 @@ nav ul li button {
     margin: 0.5rem 0;
   }
 
-  /* Optional: Increase font size for mobile */
-  nav ul li a,
-  nav ul li button {
-    font-size: 1.25rem;
-  }
-}
-
-/* === Optional Hero Section Mobile Styles === */
-@media (max-width: 768px) {
+  /* Mobile hero layout */
   .hero-container {
     flex-direction: column;
     padding: 1.5rem;
@@ -494,6 +459,7 @@ nav ul li button {
     height: auto;
   }
 }
+
 </style>
 </head>
 
