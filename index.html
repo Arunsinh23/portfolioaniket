@@ -392,7 +392,7 @@ footer {
   right: 1.5rem;
 }
 
-/* === Base Reset === */
+//* === Base Reset === */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -402,6 +402,15 @@ footer {
   /* Show hamburger on small screens */
   .hamburger {
     display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+    position: absolute;
+    top: 15px;
+    right: 20px;
   }
 
   /* Style nav for mobile */
@@ -412,24 +421,53 @@ footer {
   nav ul {
     display: none;
     flex-direction: column;
-    background: #333;
+    background: #222;
     position: absolute;
-    top: 60px;
+    top: 60px; 
     left: 0;
     width: 100%;
     padding: 1rem 0;
     margin: 0;
     z-index: 1000;
     text-align: center;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease-in-out;
   }
 
-  /* Show menu when nav has .nav-open */
   nav.nav-open ul {
     display: flex;
   }
 
   nav ul li {
-    margin: 0.5rem 0;
+    margin: 0.75rem 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #00e6aa;
+  }
+
+  nav ul li .resume-btn {
+    display: inline-block;
+    background: #00e6aa;
+    color: #111;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav ul li .resume-btn:hover {
+    background: #00b388;
+    color: white;
   }
 
   /* Mobile hero layout */
@@ -448,6 +486,13 @@ footer {
   .hero-text .tagline {
     font-size: 1rem;
   }
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
 
   .btn {
     margin-top: 1rem;
