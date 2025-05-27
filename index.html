@@ -399,17 +399,15 @@ footer {
 
 /* === Responsive Styles for Mobile === */
 @media (max-width: 768px) {
-  /* Show hamburger on small screens */
   .hamburger {
     display: block;
   }
 
-  /* Style nav for mobile */
   nav {
     position: relative;
   }
 
-nav ul {
+  nav ul {
     display: none;
     flex-direction: column;
     background: #111; /* Dark background */
@@ -426,13 +424,41 @@ nav ul {
     animation: fadeIn 0.3s ease-in-out;
   }
 
-  /* Show menu when nav has .nav-open */
   nav.nav-open ul {
     display: flex;
   }
 
   nav ul li {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
+  }
+
+  nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #00e6aa;
+  }
+
+  /* Optional: Style specific buttons like "View Resume" */
+  nav ul li .resume-btn {
+    display: inline-block;
+    background: #00e6aa;
+    color: #111;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  nav ul li .resume-btn:hover {
+    background: #00b388;
+    color: white;
   }
 
   /* Mobile hero layout */
