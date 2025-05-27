@@ -396,7 +396,7 @@ footer {
     z-index: 1001;
     position: absolute;
     top: 1.5rem;
-    right: -3.5rem;
+    right: -4.5rem;
   }
 }
 
@@ -703,28 +703,38 @@ OnlineExamPortal/
     <p>&copy; 2025 Aniket Darbar. All rights reserved.</p>
   </footer>
 
- <script>
-    const resumeModal = document.getElementById('resumeModal');
-    const closeBtn = document.getElementById('closeResumeBtn');
-    const viewResumeBtn = document.querySelector('.resume-btn');
+<script>
+  const resumeModal = document.getElementById('resumeModal');
+  const closeBtn = document.getElementById('closeResumeBtn');
+  const viewResumeBtn = document.querySelector('.resume-btn');
 
-    // Open resume
-    viewResumeBtn.addEventListener('click', () => {
+  // Open resume
+  viewResumeBtn.addEventListener('click', () => {
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      // On mobile, open the PDF in a new tab
+      window.open('Aniket_Resume.pdf', '_blank');
+    } else {
+      // On desktop, show modal
       resumeModal.style.display = 'flex';
-    });
+    }
+  });
 
-    // Close resume
-    closeBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
+  // Close resume
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    resumeModal.style.display = 'none';
+  });
+
+  // Close modal on background click
+  resumeModal.addEventListener('click', (e) => {
+    if (e.target === resumeModal) {
       resumeModal.style.display = 'none';
-    });
+    }
+  });
+</script>
 
-    // Close modal on background click
-    resumeModal.addEventListener('click', (e) => {
-      if (e.target === resumeModal) {
-        resumeModal.style.display = 'none';
-      }
-    });
 
     // Hamburger toggle
 document.addEventListener('DOMContentLoaded', () => {
