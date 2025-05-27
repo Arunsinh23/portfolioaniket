@@ -671,15 +671,24 @@ OnlineExamPortal/
     </article>
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form id="contactForm" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    const user = "aniketdarbar001";       // 👈 Your email username
+    const domain = "gmail.com";      // 👈 Your email domain
+    const email = `${user}@${domain}`;
+    const form = document.getElementById("contactForm");
+    form.setAttribute("action", `mailto:${email}`);
+  </script>
+</section>
+
 
 <!-- Resume Modal -->
   <div id="resumeModal" style="display: none;">
