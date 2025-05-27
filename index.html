@@ -379,17 +379,25 @@ footer {
   z-index: 1;
 }
 /* === Hamburger Button Styles === */
+/* Hide hamburger by default (on desktop/laptop) */
 .hamburger {
-  display: block; /* Ensure it's visible on mobile */
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1001;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  display: none;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Make it visible on mobile */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
 }
 
 /* === Base Reset === */
