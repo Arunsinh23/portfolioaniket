@@ -405,22 +405,24 @@ footer {
 
   nav {
     position: relative;
+    background: #111; /* Ensure full background under menu */
+    z-index: 1000;
+    padding-bottom: 0.5rem; /* Adds space under menu */
   }
 
   nav ul {
     display: none;
     flex-direction: column;
-    background: #111; /* Dark background */
-    position: absolute;
-    top: 60px;
-    left: 0;
+    background: transparent; /* Let nav’s background show */
+    position: relative; /* Changed from absolute */
+    top: auto;
+    left: auto;
     width: 100%;
-    padding: 1.2rem 0;
+    padding: 1rem 0;
     margin: 0;
-    z-index: 1000;
     text-align: center;
     border-radius: 0 0 12px 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: none; /* Optional: remove shadow */
     animation: fadeIn 0.3s ease-in-out;
   }
 
@@ -444,7 +446,6 @@ footer {
     color: #00e6aa;
   }
 
-  /* Optional: Style specific buttons like "View Resume" */
   nav ul li .resume-btn {
     display: inline-block;
     background: #00e6aa;
@@ -461,12 +462,12 @@ footer {
     color: white;
   }
 
-  /* Mobile hero layout */
   .hero-container {
     flex-direction: column;
     padding: 1.5rem;
     gap: 1rem;
     text-align: center;
+    margin-top: 1rem; /* Push hero down a little */
   }
 
   .hero-text h1 {
@@ -488,6 +489,7 @@ footer {
     height: auto;
   }
 }
+
 
 </style>
 </head>
