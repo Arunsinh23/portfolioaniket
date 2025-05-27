@@ -380,7 +380,7 @@ footer {
 }
 /* === Hamburger Button Styles === */
 .hamburger {
-  display: none;
+  display: block; /* Ensure it's visible on mobile */
   background: none;
   border: none;
   color: white;
@@ -404,10 +404,12 @@ footer {
     z-index: 1101;
     position: relative;
   }
-
-   nav {
-    position: relative;
-  }
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #111; /* match your theme */
+  z-index: 1000;
+}
 
     nav ul {
     display: flex;
